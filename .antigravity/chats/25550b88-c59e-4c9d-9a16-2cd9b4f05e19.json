@@ -4,5 +4,18 @@
   "createdAt": "2026-10-19T03:04:32.099Z",
   "filename": "25550b88-c59e-4c9d-9a16-2cd9b4f05e19.json",
   "geminiStarted": false,
-  "messages": []
+  "messages": [
+    {
+      "id": "15fa1a6a-eef7-4642-a811-82cbe2e6b9ab",
+      "role": "user",
+      "content": "github proyektlarim ichida tashqireklama bor  o’shani ko’rib nega serverda ishlamayapkanini tekshir",
+      "status": "pending",
+      "model": "gemini-3.8-flash-high",
+      "client_type": "gemini-bridge",
+      "parent_message_id": null,
+      "created_at": "2026-10-19T03:05:30.575Z",
+      "sender": "ios",
+      "is_cancelled": false
+    }
+  ]
 }
