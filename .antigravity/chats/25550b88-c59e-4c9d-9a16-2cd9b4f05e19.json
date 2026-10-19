@@ -40,6 +40,18 @@
       "created_at": "2026-10-19T03:08:22.817Z",
       "sender": "ios",
       "is_cancelled": false
+    },
+    {
+      "id": "097ea215-625e-48ab-bcde-366fb9357936",
+      "role": "agent",
+      "content": "Server xolati tekshirilmoqda, natijalar olinmoqda...\nServerda tuzatish tekshiruvi amalga oshirilmoqda...\nServerda TypeScript kompilyatsiyasi tekshirilmoqda...\nServeringiz (IP: **81.90.183.144**) to'liq tekshirildi va uning holati bo'yicha hisobot:\n\n---\n\n### 🖥️ **1. Serverning asosiy parametrlari**\n* **OS:** Ubuntu 24.04.4 LTS (Noble Numbat), Linux kernel 6.8\n* **Protsessor (CPU):** 1 vCPU (AMD Ryzen 9 9900X 12-Core Processor)\n* **Tezkor xotira (RAM):** Jami **1.9 GB** | Ishlatilgan: **~900 MB** | Bo'sh/Mavjud: **1.0 GB**\n* **Disk xotirasi:** Jami **30 GB** | Ishlatilgan: **5.4 GB (20%)** | Bo'sh: **23 GB (80%)**\n* **Ma'lumotlar bazasi:** PostgreSQL 16 faol (`tashqireklama` bazasi mavjud)\n* **Boshqaruv paneli:** FASTPANEL (8888 va 7777 portlarida ishlamoqda)\n\n---\n\n### 🔍 **2. Aniqlangan muammo va uni hal qilish**\nTekshiruv davomida serverda quyidagi jiddiy muammo aniqlandi:\n* Protsessor (CPU) **100%** yuklanishda ishlab turgan edi.\n* Buning sababi: `/var/www/tashqireklama-server` loyihasida `src/rpc.ts` faylidagi TypeScript xatoligi (`Cannot redeclare block-scoped variable 'verificationCode'`) tufayli server har bir soniyada `crash` bo'lib qayta ishga tushayotgan (PM2 da **5 186 marta restart** bo'lgan) va bot ishlamay qolgan edi.\n\n**Qilingan ishlar:**\n1. `src/rpc.ts` faylida takrorlangan `verificationCode` o'zgaruvchisi to'g'rilandi.\n2. TypeScript kompilyatsiyasi tekshirildi (`npx tsc --noEmit` muvaffaqiyatli o'tdi).\n3. PM2 qayta ishga tushirildi va restart hisoblagichlari nollab saqlandi.\n\n---\n\n### 🚀 **3. Hozirgi servislar holati (PM2)**\n\n| ID | Xizmat nomi | Holati | Uptime | CPU | Xotira | Izoh |\n|---|---|---|---|---|---|---|\n| **0** | `tashqireklama-server` | 🟢 **Online** | Barqaror | **0%** | 58 MB | Port 3000 ochiq, `@Tashqireklama_robot` botiga muvaffaqiyatli ulandi |\n| **2** | `telegram-business-bot` | 🟢 **Online** | 7+ soat | **0%** | 187 MB | Python boti barqaror ishlamoqda |\n\n---\n\n### 🌐 **4. Ochiq portlar**\n* **Port 22:** OpenSSH (faol)\n* **Port 3000:** `tashqireklama-server` API & Webhook (faol)\n* **Port 5432:** PostgreSQL 16 (faol)\n* **Port 8888 / 7777:** FASTPANEL (faol)\n\nServer protsessori me'yoriy holatga tushdi (CPU yuklanishi 100% dan 0% ga tushdi), barcha xizmatlar va Telegram botlari to'liq ishchi holatda.",
+      "status": "completed",
+      "model": "gemini-3.8-flash-high",
+      "client_type": "gemini-bridge",
+      "parent_message_id": "b7341d3c-3e61-499d-bf44-ac557effdad1",
+      "created_at": "2026-10-19T03:12:52.340Z",
+      "sender": "macOS",
+      "is_cancelled": false
     }
   ]
 }
